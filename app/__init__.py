@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
-from .extensions import db, login_manager
+from .extensions import db, login_manager, migrate
 from .models import User
 from flask_login import LoginManager
 
@@ -31,6 +31,7 @@ def create_app():
 
     db.init_app(app)
     login_manager.init_app(app)
+    migrate.init_app(app, db)  # <-- importante
 
     from .models import User
 
