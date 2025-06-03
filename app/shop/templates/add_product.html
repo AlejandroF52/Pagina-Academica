@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar Producto{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shop_add.css') }}">
+{% endblock %}
+{% block content %}
+<div class="add-container">
+    <div class="form-container">
+    <h2>Agregar nuevo producto</h2>
+    <form method="POST">
+        <label>Nombre *</label>
+        <input type="text" name="name" required>
+
+        <label>Descripción</label>
+        <textarea name="description"></textarea>
+
+        <label>Precio *</label>
+        <input type="number" step="0.01" name="price" required>
+
+        <label>URL de Imagen *</label>
+        <input type="url" name="image_url" required>
+
+        <button type="submit">Guardar Producto</button>
+    </form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Tienda - Mi Sitio{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+{% endblock %}
+{% block content %}
+<section class="shop-header">
+    <img src="https://i.ibb.co/HfL0Ndy9/logo-blanco.png" alt="Logo de la tienda" class="shop-logo">
+    <h1 class="shop-slogan">Tu estilo. Sin complicaciones.👔</h1>
+</section>
+
+<section class="carousel">
+    <div class="carousel-container">
+        <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Ropa 1" class="carousel-image active">
+        <img src="https://images.pexels.com/photos/11911858/pexels-photo-11911858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Ropa 2" class="carousel-image">
+        <img src="https://images.pexels.com/photos/6765524/pexels-photo-6765524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Ropa 3" class="carousel-image">
+    </div>
+</section>
+
+<section class="products">
+    <h2>Productos Destacados ⭐</h2>
+    <div class="add-product-container">
+    <a href="{{ url_for('shop.add_product') }}" class="add-product-btn">+ Agregar Producto</a>
+    </div>
+    <div class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <img src="{{ product.image_url }}" alt="{{ product.name }}">
+            <div class="product-info">
+            <h3>{{ product.name }}</h3>
+            <p class="description">{{ product.description[:80] }}{% if product.description|length > 80 %}...{% endif %}</p>
+            <p class="price">${{ "%.2f"|format(product.price) }}</p>
+            <button class="buy-btn">Comprar</button>
+            <div class="product-actions">
+            <a href="{{ url_for('shop.update_product', product_id=product.id) }}" class="update-btn">Editar</a>
+            <form action="{{ url_for('shop.delete_product', product_id=product.id) }}" method="post" style="display:inline;">
+                <button type="submit" class="delete-btn" onclick="return confirm('¿Seguro que quieres eliminar este producto?');">Eliminar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock %}
+{% block scripts %}
+        <script src="{{ url_for('static', filename='js/shop.js') }}"></script>
+{% endblock %}

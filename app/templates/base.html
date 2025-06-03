@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    {% block head %}{% endblock %}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Verificar este espacio para añadir los mensajes en pantalla -->
+    </header>
+    <main>
+            
+        <nav>
+            <ul>
+            <li><a href="{{ url_for('main.about') }}">Acerca de</a></li>
+            <li><a href="{{ url_for('main.home') }}">Home</a></li>
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('auth.logout') }}" class="logout-button">Cerrar Sesión ({{ current_user.username }})</a></li>
+            {% else %}
+            <li><a href="{{ url_for('auth.login') }}" class="login-button">Iniciar Sesión</a></li>
+            {% endif %}
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+        {% block scripts %}
+        <script src="{{ url_for('static', filename='js/shop.js') }}"></script>
+        {% endblock %}
+    </main>
+    
+</body>
+</html>

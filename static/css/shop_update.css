@@ -1,0 +1,69 @@
+.update-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-product-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    color: #f0e6d2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-product-page h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #904f1e;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-form input[type="text"],
+.product-form input[type="number"],
+.product-form textarea {
+    padding: 10px;
+    border: 2px solid #904f1e;
+    border-radius: 8px;
+    background-color: #1b1b1b;
+    color: #f0e6d2;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.product-form input[type="text"]:focus,
+.product-form input[type="number"]:focus,
+.product-form textarea:focus {
+    border-color: #f9a826;
+    outline: none;
+}
+
+.product-form textarea {
+    min-height: 100px;
+}
+
+.product-form button {
+    background-color: #904f1e;
+    color: #f0e6d2;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-form button:hover {
+    background-color: #b06327;
+}

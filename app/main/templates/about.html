@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Acerca de - Mi Sitio{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}  
+
+{% block content %}
+<section class="about-container">
+    <div class="about-section">
+        <h2>Sobre Nosotros</h2>
+        <p>
+            Este sitio web es un proyecto académico desarrollado por estudiantes de la Universidad Uniremington, sede Yopal.
+
+            Su único propósito es servir como práctica educativa en el desarrollo de aplicaciones web utilizando tecnologías como Flask, SQLAlchemy y Flask-Login.
+
+            No se busca monetizar, vender productos reales ni obtener beneficios económicos o de otro tipo. Todos los productos y elementos presentados son simulados y utilizados exclusivamente con fines didácticos.
+
+            Agradecemos su comprensión. Este proyecto representa un esfuerzo académico conjunto y no está vinculado a ninguna actividad comercial.
+        </p>
+    </div>
+</section>
+{% endblock %}

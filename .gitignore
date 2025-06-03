@@ -1,0 +1,29 @@
+# __pycache__ y archivos compilados
+__pycache__/
+*.pyc
+*.pyo
+
+# Entornos virtuales
+venv/
+env/
+
+# Archivos de configuración del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de base de datos locales
+instance/*.db
+*.sqlite3
+
+# Archivos de logs
+*.log
+
+# Archivos de entorno (puedes mantener tus variables en .env localmente)
+.env
+
+# Archivos de despliegue de IDEs
+.vscode/
+.idea/
+
+# Archivos de prueba
+*.pytest_cache/

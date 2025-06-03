@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Actualizar Producto{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shop_update.css') }}">
+{% endblock %}
+{% block content %}
+<section class="update-section">
+    <div class="add-product-page">
+        <h2>Actualizar Producto</h2>
+        <form method="post" class="product-form">
+            <input type="text" name="name" value="{{ product.name }}" required>
+            <textarea name="description" required>{{ product.description }}</textarea>
+            <input type="number" name="price" step="0.01" value="{{ product.price }}" required>
+            <input type="text" name="image_url" value="{{ product.image_url }}" required>
+            <button type="submit">Actualizar</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,101 @@
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.home-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.home-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    width: 30%;
+}
+
+.home-links-text {
+    color: white;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.home-links-text h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.home-links-text p {
+    font-size: 12px;
+    color: gray;
+}
+
+.home-links-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.home-links-buttons-shop {
+    background-color: #904f1e;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 0px;
+    font-size: 12px;
+    font-family: poppins, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.home-links-buttons-shop a {
+    color: white;
+    text-decoration: none;
+}
+
+.home-links-buttons-register a {
+    color: black;
+    text-decoration: none;
+}
+
+.home-links-buttons-shop:hover {
+    background-color: #b06a3c;
+}
+
+.home-links-buttons-register {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 0px;
+    font-size: 12px;
+    font-family: poppins, sans-serif;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    border: none;
+}
+
+.home-links-buttons-register:hover {
+    filter: brightness(0.8);
+}
+
+.home-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 70%;
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

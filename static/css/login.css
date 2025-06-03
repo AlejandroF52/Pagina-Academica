@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: #2a2a2a;
+    padding: 40px 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 10px rgba(144, 79, 30, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-2px);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #904f1e;
+    animation: slideDown 0.5s ease-out;
+}
+
+.login-form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border: 1px solid #904f1e;
+    transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    background-color: #262626;
+    border-color: #ff7f50;
+}
+
+.login-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #904f1e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #b0612c;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.register-link a {
+    color: #904f1e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Animaciones básicas */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
